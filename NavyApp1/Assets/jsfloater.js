@@ -12,6 +12,7 @@ public var speed : float = 1f;
 	//rb.AddForce(Vector3.up * 10f);	
 //}
 
+
 function Update () 
 {
 	//gameObject.rigidbody.transform.up();
