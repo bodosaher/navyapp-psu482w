@@ -1,10 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Mass.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js">
     <Files>
-      <File FileName="..\GitHub\navyapp-psu482w\NavyApp1\Assets\move.js" Line="1" Column="1" />
-      <File FileName="Assets\MoveShip.js" Line="12" Column="51" />
-      <File FileName="Assets\Mass.js" Line="6" Column="4" />
+      <File FileName="Assets\move.js" Line="15" Column="46" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="20" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
