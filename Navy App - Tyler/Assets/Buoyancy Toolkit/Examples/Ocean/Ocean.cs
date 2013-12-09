@@ -5,13 +5,16 @@ public class Ocean : FluidVolume
 	// params for user input on wave direction 
 	public float xDirec = 0.2f;
 	public float zDirec = 0.2f;
+	public float xFreq = 0.5f;
+	public float zFreq = 0.5f;
 	
 	public override float WaveFunction(Vector3 worldPoint)
 	{
 		// wave function 
-		return Mathf.Sin(worldPoint.x * 0.5f + Time.time) * xDirec + Mathf.Sin(worldPoint.z * 0.5f + Time.time) * zDirec;
+		return Mathf.Sin(worldPoint.x * xFreq + Time.time) * xDirec + Mathf.Sin(worldPoint.z * zFreq + Time.time) * zDirec;
 	}
-	
+
+
 	public void FixedUpdate()
 	{
 		// Update the mesh using FluidVolume.ProjectPointOntoSurface()
