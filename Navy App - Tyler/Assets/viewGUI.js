@@ -46,7 +46,7 @@ function OnGUI ()
   }
 		
   // Island View Button
-  if (GUI.Button (Rect(420, Screen.height - 45, 150, 30), "Island View")) 
+  if (GUI.Button (Rect(420, Screen.height - 45, 150, 30), "Distant View")) 
   {
     cam1.enabled = false;
     cam2.enabled = false;
