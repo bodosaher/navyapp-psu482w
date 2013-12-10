@@ -14,19 +14,19 @@ public class viewGUI2 : MonoBehaviour {
 	public GUISkin customGUISkin;
 	public Texture2D gear;
 
-	//float startPitch;
-	//float startRoll;
-	//float startYaw;
-	//float startHeave;
-	//float startSway;
-	//float startSurge;
+	float startPitch;
+	float startRoll;
+	float startYaw;
+	float startHeave;
+	float startSway;
+	float startSurge;
 
-	//float currentPitch;
-	//float currentRoll;
-	//float currentYaw;
-	//float currentHeave;
-	//float currentSway;
-	//float currentSurge;
+	float currentPitch;
+	float currentRoll;
+	float currentYaw;
+	float currentHeave;
+	float currentSway;
+	float currentSurge;
 
 	// Use this for initialization
 	void Start () {
@@ -38,12 +38,12 @@ public class viewGUI2 : MonoBehaviour {
 		GameObject waterObject = GameObject.Find("DaylightSimpleWater");
 		localOcean = waterObject.GetComponent<Ocean>();
 
-		//startPitch = ship.rotation.z;
-		//startRoll = ship.rotation.x;
-		//startYaw = ship.rotation.y;
-		//startHeave = ship.position.y;
-		//startSway = ship.position.z;
-		//startSurge = ship.position.x;
+		startPitch = ship.rotation.z;
+		startRoll = ship.rotation.x;
+		startYaw = ship.rotation.y;
+		startHeave = ship.position.y;
+		startSway = ship.position.z;
+		startSurge = ship.position.x;
 	}
 
 	void OnGUI () {
@@ -55,14 +55,20 @@ public class viewGUI2 : MonoBehaviour {
 
 
 		//Display information about the ship's position
-		//currentPitch = ship.rotation.z;
-		//currentRoll = ship.rotation.x;
-		//currentYaw = ship.rotation.y;
-		//currentHeave = ship.position.y;
-		//currentSway = ship.position.z;
-		//currentSurge = ship.position.x;
+		currentPitch = ship.rotation.z;
+		currentRoll = ship.rotation.x;
+		currentYaw = ship.rotation.y;
+		currentHeave = ship.position.y;
+		currentSway = ship.position.z;
+		currentSurge = ship.position.x;
 
-		//GUI.Box(new Rect (Screen.width - 40, 75, 30, 20), ship.position.y.ToString());
+		GUI.Box(new Rect (Screen.width - 170, 75, 160, 30), "Ship Position Information");
+		GUI.Box(new Rect (Screen.width - 160, 110, 150, 30), ("Pitch: " + (startPitch - currentPitch).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 145, 150, 30), ("Roll: " + (startRoll - currentRoll).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 180, 150, 30), ("Yaw: " + (startYaw - currentYaw).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 215, 150, 30), ("Heave: " + (startHeave - currentHeave).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 250, 150, 30), ("Sway: " + (startSway - currentSway).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 285, 150, 30), ("Surge: " + (startSurge - currentSurge).ToString()));
 
 		GUI.skin = null;
 
