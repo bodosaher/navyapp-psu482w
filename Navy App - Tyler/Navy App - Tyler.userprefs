@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\viewGUI2.cs">
     <Files>
-      <File FileName="Assets\Buoyancy Toolkit\Examples\Ocean\Ocean.cs" Line="16" Column="1" />
-      <File FileName="Assets\viewGUI2.cs" Line="6" Column="18" />
+      <File FileName="Assets\viewGUI2.cs" Line="29" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

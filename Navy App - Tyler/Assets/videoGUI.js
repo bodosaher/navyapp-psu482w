@@ -19,22 +19,22 @@ function OnGUI ()
   if(videoGUIEnabled) 
   {
     // Make a background box
-    GUI.Box (Rect (20, 10, 600, 40), "");
+    GUI.Box (Rect (120, 10, 600, 40), "");
 
     // Start Recording Button
-    if (GUI.Button (Rect(40, 15, 160, 30), "Start Recording")) 
+    if (GUI.Button (Rect(140, 15, 160, 30), "Start Recording")) 
     {
       Kamcord.StartRecording();
     }
 
     // Stop Recording Button
-    if (GUI.Button (Rect(240, 15, 160, 30), "Stop Recording")) 
+    if (GUI.Button (Rect(340, 15, 160, 30), "Stop Recording")) 
     {
       Kamcord.StopRecording();
     }
 		
     // Share Button
-    if (GUI.Button (Rect(440, 15, 160, 30), "Share")) 
+    if (GUI.Button (Rect(540, 15, 160, 30), "Share")) 
     {
       Kamcord.ShowView();
     }    

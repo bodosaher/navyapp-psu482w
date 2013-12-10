@@ -14,6 +14,20 @@ public class viewGUI2 : MonoBehaviour {
 	public GUISkin customGUISkin;
 	public Texture2D gear;
 
+	//float startPitch;
+	//float startRoll;
+	//float startYaw;
+	//float startHeave;
+	//float startSway;
+	//float startSurge;
+
+	//float currentPitch;
+	//float currentRoll;
+	//float currentYaw;
+	//float currentHeave;
+	//float currentSway;
+	//float currentSurge;
+
 	// Use this for initialization
 	void Start () {
 		cam1.enabled = true;
@@ -23,6 +37,13 @@ public class viewGUI2 : MonoBehaviour {
 
 		GameObject waterObject = GameObject.Find("DaylightSimpleWater");
 		localOcean = waterObject.GetComponent<Ocean>();
+
+		//startPitch = ship.rotation.z;
+		//startRoll = ship.rotation.x;
+		//startYaw = ship.rotation.y;
+		//startHeave = ship.position.y;
+		//startSway = ship.position.z;
+		//startSurge = ship.position.x;
 	}
 
 	void OnGUI () {
@@ -32,6 +53,17 @@ public class viewGUI2 : MonoBehaviour {
 			GUIEnabled = !GUIEnabled;
 		}
 
+
+		//Display information about the ship's position
+		//currentPitch = ship.rotation.z;
+		//currentRoll = ship.rotation.x;
+		//currentYaw = ship.rotation.y;
+		//currentHeave = ship.position.y;
+		//currentSway = ship.position.z;
+		//currentSurge = ship.position.x;
+
+		//GUI.Box(new Rect (Screen.width - 40, 75, 30, 20), ship.position.y.ToString());
+
 		GUI.skin = null;
 
 		if(GUIEnabled) {
@@ -39,7 +71,7 @@ public class viewGUI2 : MonoBehaviour {
 			GUI.Box (new Rect (20, Screen.height - 100, 760, 100), "");
 			
 			// Side View Button
-			if (GUI.Button (new Rect(40, Screen.height - 35, 150, 30), "Side View")) 
+			if (GUI.Button (new Rect(40, Screen.height - 35, 130, 30), "Side View")) 
 			{
 				cam1.enabled = true;
 				cam2.enabled = false;
@@ -48,7 +80,7 @@ public class viewGUI2 : MonoBehaviour {
 			}
 			
 			// Top View Button
-			if (GUI.Button (new Rect(230, Screen.height - 35, 150, 30), "Top View")) 
+			if (GUI.Button (new Rect(185, Screen.height - 35, 130, 30), "Top View")) 
 			{
 				cam1.enabled = false;
 				cam2.enabled = true;
@@ -57,7 +89,7 @@ public class viewGUI2 : MonoBehaviour {
 			}
 			
 			// Island View Button
-			if (GUI.Button (new Rect(420, Screen.height - 35, 150, 30), "Distant View")) 
+			if (GUI.Button (new Rect(330, Screen.height - 35, 130, 30), "Distant View")) 
 			{
 				cam1.enabled = false;
 				cam2.enabled = false;
@@ -66,13 +98,19 @@ public class viewGUI2 : MonoBehaviour {
 			}
 			
 			// Bow View Button
-			if (GUI.Button (new Rect(610, Screen.height - 35, 150, 30), "Bow View")) 
+			if (GUI.Button (new Rect(475, Screen.height - 35, 130, 30), "Bow View")) 
 			{
 				cam1.enabled = false;
 				cam2.enabled = false;
 				cam3.enabled = false;
 				cam4.enabled = true;
 			}  
+
+			//Reset Button
+			if(GUI.Button (new Rect(620, Screen.height - 35, 130, 30), "Reset"))
+			{
+				Application.LoadLevel(0);
+			}
 
 			GUI.Label(new Rect(40, Screen.height - 100, 150, 20), "Intensity in X Direction");
 			GUI.Label(new Rect(230, Screen.height - 100, 150, 20), "Intensity in Z Direction");
