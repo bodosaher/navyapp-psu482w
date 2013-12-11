@@ -63,12 +63,12 @@ public class viewGUI2 : MonoBehaviour {
 		currentSurge = ship.position.x;
 
 		GUI.Box(new Rect (Screen.width - 170, 75, 160, 30), "Ship Position Information");
-		GUI.Box(new Rect (Screen.width - 160, 110, 150, 30), ("Pitch: " + (startPitch - currentPitch).ToString()));
-		GUI.Box(new Rect (Screen.width - 160, 145, 150, 30), ("Roll: " + (startRoll - currentRoll).ToString()));
-		GUI.Box(new Rect (Screen.width - 160, 180, 150, 30), ("Yaw: " + (startYaw - currentYaw).ToString()));
-		GUI.Box(new Rect (Screen.width - 160, 215, 150, 30), ("Heave: " + (startHeave - currentHeave).ToString()));
-		GUI.Box(new Rect (Screen.width - 160, 250, 150, 30), ("Sway: " + (startSway - currentSway).ToString()));
-		GUI.Box(new Rect (Screen.width - 160, 285, 150, 30), ("Surge: " + (startSurge - currentSurge).ToString()));
+		GUI.Box(new Rect (Screen.width - 160, 110, 150, 30), ("Pitch: " + (currentPitch - startPitch).ToString("F5")));
+		GUI.Box(new Rect (Screen.width - 160, 145, 150, 30), ("Roll: " + (currentRoll - startRoll).ToString("F5")));
+		GUI.Box(new Rect (Screen.width - 160, 180, 150, 30), ("Yaw: " + (currentYaw - startYaw).ToString("F5")));
+		GUI.Box(new Rect (Screen.width - 160, 215, 150, 30), ("Heave: " + (currentHeave - startHeave).ToString("F5")));
+		GUI.Box(new Rect (Screen.width - 160, 250, 150, 30), ("Sway: " + (currentSway - startSway).ToString("F5")));
+		GUI.Box(new Rect (Screen.width - 160, 285, 150, 30), ("Surge: " + (currentSurge - startSurge).ToString("F5")));
 
 		GUI.skin = null;
 
@@ -120,11 +120,11 @@ public class viewGUI2 : MonoBehaviour {
 
 			GUI.Label(new Rect(40, Screen.height - 100, 150, 20), "Intensity in X Direction");
 			GUI.Label(new Rect(230, Screen.height - 100, 150, 20), "Intensity in Z Direction");
-			GUI.Label(new Rect(420, Screen.height - 100, 150, 20), "Frequency in X Direction");
-			GUI.Label(new Rect(610, Screen.height - 100, 150, 20), "Frequency in Z Direction");
+			GUI.Label(new Rect(420, Screen.height - 100, 150, 20), "Wavelength in X Direction");
+			GUI.Label(new Rect(610, Screen.height - 100, 150, 20), "Wavelength in Z Direction");
 
 			localOcean.xDirec = GUI.HorizontalSlider (new Rect (40, Screen.height - 70, 150, 80), localOcean.xDirec, 0.0f, 2.0f);
-			localOcean.zDirec = GUI.HorizontalSlider (new Rect (230, Screen.height - 70, 150, 80), localOcean.zDirec, 0.0f, 2.0f);
+			localOcean.zDirec = GUI.HorizontalSlider (new Rect (230, Screen.height - 70, 150, 80), localOcean.zDirec, 0.0f, 4.0f);
 			localOcean.xFreq = GUI.HorizontalSlider (new Rect (420, Screen.height - 70, 150, 80), localOcean.xFreq, 0.0f, 1.0f);
 			localOcean.zFreq = GUI.HorizontalSlider (new Rect (610, Screen.height - 70, 150, 80), localOcean.zFreq, 0.0f, 1.0f);
 
