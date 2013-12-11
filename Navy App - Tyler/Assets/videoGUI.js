@@ -1,7 +1,12 @@
 ﻿#pragma strict
 
+/*To record, we used the kamcord (more info available at http://kamcord.com/).*/
+
+//Consition which is true when the videoGUI is enabled
 var videoGUIEnabled : boolean = false;
+// "Play" Icon which opens and closes the video menu
 var videoIcon : Texture2D;
+//Skin applied to the GUI
 var customGUISkin : GUISkin;
 var firstVideoRecorded : boolean = false;
 var startedRecording: boolean = false;
